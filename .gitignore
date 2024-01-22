@@ -34,5 +34,5 @@
 build
 .vscode
 .cache
-
+.idea
 CMakeLists.txt
