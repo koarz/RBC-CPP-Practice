@@ -5,5 +5,5 @@ set(LIBRARY_LIBS
     include/queue.h
 )
 
-add_library(library STATIC ${LIBRARY_LIBS})
+add_library(library ${LIBRARY_LIBS})
 set_target_properties(library PROPERTIES LINKER_LANGUAGE CXX)

@@ -13,7 +13,7 @@ template <typename T> class queue;
 } // namespace rbc
 
 template <typename T> class rbc::queue {
-  // 这里可以添加数据成员，保证它们是private的
+  // 这里可以添加数据成员，保证它们是private的，例如 T head什么的
 
 public:
   using value_type = T;
