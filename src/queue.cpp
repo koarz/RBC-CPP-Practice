@@ -7,9 +7,6 @@
  */
 #include "queue.h"
 // 在这里实现类的所有函数
-RBC_QUEUE::queue() {}
-
-RBC_QUEUE::~queue() {}
 
 RBC_QUEUE &rbc::queue<T>::operator=(const rbc::queue<T> &other) {}
 
