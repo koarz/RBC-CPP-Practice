@@ -13,6 +13,11 @@ project(RBC-Struct-Practice
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+if(EMSCRIPTEN)
+        add_compile_options(-fexceptions)
+        add_link_options(-fexceptions)
+endif()
+
 # People keep running CMake in the wrong folder, completely nuking their project or creating weird bugs.
 # This checks if you're running CMake from a folder that already has CMakeLists.txt.
 # Importantly, this catches the common case of running it from the root directory.
@@ -22,6 +27,22 @@ if(EXISTS "${PATH_TO_CMAKELISTS_TXT}")
     message(FATAL_ERROR "Run CMake from a build subdirectory! \"mkdir build ; cd build ; cmake ..\" \
     Some junk files were created in this folder (CMakeCache.txt, CMakeFiles); you should delete those.")
 endif()
+
+# Compiler flags.
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -Wextra -Werror")
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wno-unused-parameter -Wno-attributes") # TODO: remove
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0 -ggdb -fsanitize=${SANITIZER} -fno-omit-frame-pointer -fno-optimize-sibling-calls")
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+message(STATUS "CMAKE_CXX_FLAGS: ${CMAKE_CXX_FLAGS}")
+message(STATUS "CMAKE_CXX_FLAGS_DEBUG: ${CMAKE_CXX_FLAGS_DEBUG}")
+message(STATUS "CMAKE_EXE_LINKER_FLAGS: ${CMAKE_EXE_LINKER_FLAGS}")
+message(STATUS "CMAKE_SHARED_LINKER_FLAGS: ${CMAKE_SHARED_LINKER_FLAGS}")
+
+# Output directory.
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 set(SRC_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/src/include)
 set(THIRD_PARTY_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/thirdparty)

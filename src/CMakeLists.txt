@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 3.14)
 
 # 在这里添加你添加的头文件路径
-set(library
+set(LIBRARY_LIBS
     include/queue.h
 )
 
-include_directories(${library})
+add_library(library STATIC ${LIBRARY_LIBS})
+set_target_properties(library PROPERTIES LINKER_LANGUAGE CXX)
