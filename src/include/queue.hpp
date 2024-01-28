@@ -22,11 +22,7 @@ public:
   using const_reference = const T &;
 
   queue<T>() = default;
-  ~queue<T>() {
-    delete front_.next;
-    front_.next = nullptr;
-    back_.next = nullptr;
-  }
+  ~queue<T>() = default;
   queue<T> &operator=(const rbc::queue<T> &other);
   queue<T> &operator=(rbc::queue<T> &&other) noexcept;
   reference front();
