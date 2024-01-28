@@ -10,19 +10,10 @@
 
 namespace rbc {
 template <typename T> class queue;
-template <typename T> struct basic_queue {
-  basic_queue<T> *next{nullptr};
-  T data;
-  basic_queue<T>() = default;
-  ~basic_queue<T>() { delete next; }
-};
 } // namespace rbc
 
 template <typename T> class rbc::queue {
   // 这里可以添加数据成员，保证它们是private的，例如 T head什么的
-  basic_queue<T> front_;
-  basic_queue<T> back_;
-  unsigned int size_{0};
 
 public:
   using value_type = T;
