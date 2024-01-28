@@ -8,6 +8,7 @@
 #include "queue.h"
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
+#include <iostream>
 // queue test
 namespace rbc {
 TEST(QueueTest, BasicTest) {
@@ -22,14 +23,15 @@ TEST(QueueTest, BasicTest) {
   ASSERT_EQ(container.back(), 4);
   container.push(5);
   ASSERT_EQ(container.back(), 5);
+  ASSERT_EQ(container.front(), 1);
   container.pop();
-  ASSERT_EQ(container.back(), 4);
+  ASSERT_EQ(container.front(), 2);
   container.pop();
-  ASSERT_EQ(container.back(), 3);
+  ASSERT_EQ(container.front(), 3);
   container.pop();
-  ASSERT_EQ(container.back(), 2);
+  ASSERT_EQ(container.front(), 4);
   container.pop();
-  ASSERT_EQ(container.back(), 1);
+  ASSERT_EQ(container.front(), 5);
   ASSERT_EQ(container.back(), container.front());
 }
 
@@ -71,7 +73,7 @@ TEST(QueueTest, DifficultTest) {
   ASSERT_EQ(container == temp, true);
   for (int i = 1000; i > 0; i--) {
     ASSERT_EQ(temp.size(), i);
-    ASSERT_EQ(temp.back(), i - 1);
+    ASSERT_EQ(temp.front(), 1000 - i);
     temp.pop();
   }
   ASSERT_EQ(container > temp, true);
@@ -80,7 +82,7 @@ TEST(QueueTest, DifficultTest) {
   ASSERT_EQ(container != temp, true);
   for (int i = 1000; i > 0; i--) {
     ASSERT_EQ(temp.size(), i);
-    ASSERT_EQ(temp.back(), i - 1);
+    ASSERT_EQ(temp.front(), 1000 - i);
     temp.pop();
   }
   ASSERT_EQ(container == temp, true);
