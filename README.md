@@ -20,4 +20,4 @@ cmake ..
 ```
 注意，以上命令仅需输入一次，以后就不需要了
 
-最后再输入`make file_test`，例如想要验证`queue`容器的正确性，那就是`make queue_test`，编译好后执行`./bin/queue_test`即可
+最后再输入`make file_test`，例如想要验证`queue`容器的正确性，那就是`make queue_test`，编译好后执行`./test/queue_test`即可
