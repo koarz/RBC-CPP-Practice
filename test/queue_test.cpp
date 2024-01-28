@@ -8,7 +8,6 @@
 #include "queue.h"
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
-#include <iostream>
 // queue test
 namespace rbc {
 TEST(QueueTest, BasicTest) {
