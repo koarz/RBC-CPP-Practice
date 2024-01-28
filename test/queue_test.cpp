@@ -5,7 +5,7 @@
  * @date           : 2024/1/22
  ******************************************************************************
  */
-#include "queue.h"
+#include "queue.hpp"
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 // queue test
