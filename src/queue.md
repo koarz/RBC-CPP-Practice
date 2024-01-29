@@ -25,7 +25,7 @@ T - 存储的元素类型。
 | const_reference | const T&     |
 
 ## 成员函数
-1. **非成员函数**
+1. **成员函数**
    - `(构造函数)` | `构造queue`
    - `(析构函数)` | `析构queue`
    - `operator=` | `赋值给容器`
@@ -40,4 +40,5 @@ T - 存储的元素类型。
    - `pop` | `移除首个元素`
    - `emplace` | `在尾部原位构造元素`
    - `swap` | `交换内容`
+## 非成员函数
    - `operator== | operator< | operator> | operator>= | operator<= | operator !=` | `按字典序比较两个queue的值`
