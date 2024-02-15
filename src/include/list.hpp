@@ -3,7 +3,6 @@
 namespace rbc {
 template <typename T> class list;
 } // namespace rbc
-
 template <typename T> class rbc::list {
 public:
   using value_type = T;
