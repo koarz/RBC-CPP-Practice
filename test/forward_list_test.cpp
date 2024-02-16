@@ -10,8 +10,8 @@ TEST(ForwardListTest, BasicTest) {
     EXPECT_EQ(c.front(), i);
   }
   for (int i = 100; i > 0; i--) {
-    c.pop_front();
     EXPECT_EQ(c.front(), i - 1);
+    c.pop_front();
   }
 }
 TEST(ForwardListTest, SizeTest) {
