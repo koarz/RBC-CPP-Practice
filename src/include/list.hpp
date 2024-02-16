@@ -30,12 +30,17 @@ public:
 
   // 迭代器部分
   template <typename U> struct iterator {
+    iterator<U>() = default;
     // 这几个是必须的，剩下自由发挥
-    iterator<U> operator++();
-    iterator<U> operator--();
-    reference operator*();
-    friend bool operator!=(const iterator<U> &lhs,
-                           const iterator<U> &rhs) noexcept;
+    iterator<U> operator++() { return *this; }
+    iterator<U> operator--() { return *this; }
+    reference operator*() {
+      T a;
+      return a;
+    }
+    friend bool operator!=(const iterator<U> &lhs, const iterator<U> &rhs) {
+      return false;
+    }
   };
   void insert(iterator<T> pos, const_reference value);
   void erase(iterator<T> pos);
@@ -50,8 +55,10 @@ public:
   template <typename T> typename rbc::list<T>::const_reference rbc::list<T>
 #define RBC_LIST_VOID template <typename T> void rbc::list<T>
 
-RBC_LIST &rbc::list<T>::operator=(const rbc::list<T> &other) {}
-RBC_LIST &rbc::list<T>::operator=(rbc::list<T> &&other) noexcept {}
+RBC_LIST &rbc::list<T>::operator=(const rbc::list<T> &other) { return *this; }
+RBC_LIST &rbc::list<T>::operator=(rbc::list<T> &&other) noexcept {
+  return *this;
+}
 
 RBC_LIST_REF_V::front() {}
 
@@ -61,10 +68,12 @@ RBC_LIST_REF_V::back() {}
 
 RBC_LIST_C_REF_V::back() const {}
 
-template <typename T> bool rbc::list<T>::empty() const {}
+template <typename T> bool rbc::list<T>::empty() const { return true; }
 
 template <typename T>
-typename rbc::list<T>::size_type rbc::list<T>::size() const {}
+typename rbc::list<T>::size_type rbc::list<T>::size() const {
+  return 0;
+}
 
 RBC_LIST_VOID::push_front(rbc::list<T>::const_reference value) {}
 
@@ -92,11 +101,3 @@ template <typename T>
 typename rbc::list<T>::template iterator<T> rbc::list<T>::end() {
   return iterator<T>();
 }
-
-namespace rbc {
-template <typename T>
-bool operator!=(const typename list<T>::template iterator<T> &lhs,
-                const typename list<T>::template iterator<T> &rhs) noexcept {
-  return true;
-}
-} // namespace rbc
