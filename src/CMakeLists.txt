@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 3.14)
 set(LIBRARY_HEAD
     include/queue.hpp
     include/list.hpp
+    include/forward_list.hpp
 )
 
 add_library(library STATIC ${LIBRARY_HEAD})
