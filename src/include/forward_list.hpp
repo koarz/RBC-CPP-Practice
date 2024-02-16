@@ -7,7 +7,7 @@ template <typename T> class forward_list;
 template <typename T> class rbc::forward_list {
 public:
   using value_type = T;
-  using size_type = std::size_t;
+  using size_type = unsigned int;
   using reference = value_type &;
   using const_reference = const value_type &;
 
@@ -32,8 +32,9 @@ public:
       T a;
       return a;
     }
-    friend bool operator!=(const iterator<U> &lhs,
-                           const iterator<U> &rhs) { return true; }
+    friend bool operator!=(const iterator<U> &lhs, const iterator<U> &rhs) {
+      return true;
+    }
   };
   void insert_after(iterator<T> pos, const_reference value);
   void erase_after(iterator<T> first, iterator<T> last);
@@ -63,7 +64,9 @@ template <typename T> bool rbc::forward_list<T>::empty() const { return true; }
 
 template <typename T>
 typename rbc::forward_list<T>::size_type
-rbc::forward_list<T>::max_size() const { return 0; }
+rbc::forward_list<T>::max_size() const {
+  return 0;
+}
 
 RBC_FORWARD_LIST_VOID::push_front(rbc::forward_list<T>::const_reference value) {
 }
