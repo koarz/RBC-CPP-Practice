@@ -1,11 +1,3 @@
-/**
- ******************************************************************************
- * @file           : queue.h
- * @author         : Koarz
- * @date           : 2024/1/22
- ******************************************************************************
- */
-
 #pragma once
 
 namespace rbc {
@@ -82,7 +74,8 @@ RBC_QUEUE &rbc::queue<T>::operator=(const rbc::queue<T> &other) {
     if (!this_front->next && other_front) {
       this_front->next = new basic_queue<T>();
     }
-    this_front = this_front->next;
+    if (this_front->next)
+      this_front = this_front->next;
   }
   if (size() > other.size()) {
     delete this_front->next;
