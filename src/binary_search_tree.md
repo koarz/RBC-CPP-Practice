@@ -1,7 +1,7 @@
 # BST
 
 ## 介绍
-本项目基于AP1400-2-HW3。在这个项目中，我们将实现一个二叉搜索树（BST）。二叉树是一种树形图，其中节点最多只能有 2 个子节点。二叉搜索树是一种二叉树，其中每个节点的右子节点的值大于左节点的值。我们将实现 2 个类，分别为Node和BST，基本的框架已经给出。
+本项目基于AP1400-2-HW3(经过了模板编程的升级，还给出了基本框架。)。在这个项目中，我们将实现一个二叉搜索树（BST）。二叉树是一种树形图，其中节点最多只能有 2 个子节点。二叉搜索树是一种二叉树，其中每个节点的右子节点的值大于左节点的值。我们将实现 2 个类，分别为Node和BST，基本的框架已经给出。
 
 **请注意，本项目的难度较大，建议做完前面四个在来做这个。**
 
@@ -94,3 +94,23 @@ operator++ 实现这两个 ++ 运算符，以便使每个结点自增1。
 
 ### 12. operator=
  实现 operator= （拷贝构造和移动构造） 的两个版本。
+
+## debug
+如果你想要debug，使用以下代码：
+```cpp
+if (true) // make false to run unit tests  
+{ 
+	// debug section 
+}  
+else  
+{  
+	::testing::InitGoogleTest(&argc, argv);  
+	std::cout << "RUNNING TESTS ..." << std::endl;  
+	int ret{RUN_ALL_TESTS()};  
+	if (!ret)  
+		std::cout << "<<<SUCCESS>>>" << std::endl;  
+	else  
+	  std::cout << "FAILED" << std::endl;  
+}  
+return 0;
+```
