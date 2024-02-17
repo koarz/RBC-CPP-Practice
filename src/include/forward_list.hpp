@@ -35,6 +35,9 @@ public:
     friend bool operator!=(const iterator<U> &lhs, const iterator<U> &rhs) {
       return true;
     }
+    friend bool operator==(const iterator<U> &lhs, const iterator<U> &rhs) {
+      return true;
+    }
   };
   void insert_after(iterator<T> pos, const_reference value);
   void erase_after(iterator<T> first, iterator<T> last);
