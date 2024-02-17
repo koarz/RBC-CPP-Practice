@@ -142,7 +142,9 @@ RBC_QUEUE_VOID::pop() {
     front_.next = temp->next;
     temp->next = nullptr;
     delete temp;
-    size_--;
+    if (--size_ == 0) {
+      back_.next = nullptr;
+    }
   }
 }
 
