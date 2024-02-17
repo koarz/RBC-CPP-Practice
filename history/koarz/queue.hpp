@@ -209,7 +209,7 @@ bool operator<(const rbc::queue<T> &lhs, const rbc::queue<T> &rhs) {
   while (!temp1.empty() && !temp2.empty()) {
     if (temp1.front() > temp2.front()) {
       return false;
-    } else if (temp1.front() > temp2.front()) {
+    } else if (temp1.front() < temp2.front()) {
       return true;
     }
     temp1.pop();
