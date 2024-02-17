@@ -57,7 +57,7 @@ TEST(QueueTest, QueueSizeTest) {
   ASSERT_EQ(container.size(), 1);
   container.pop();
   ASSERT_EQ(container.size(), 0);
-  ASSERT_EQ(container.empty(), true);
+  ASSERT_TRUE(container.empty());
 }
 
 TEST(QueueTest, DifficultTest) {
@@ -70,21 +70,21 @@ TEST(QueueTest, DifficultTest) {
   }
   queue<int> temp;
   temp = container;
-  ASSERT_EQ(container == temp, true);
+  ASSERT_TRUE(container == temp);
   for (int i = 1000; i > 0; i--) {
     ASSERT_EQ(temp.size(), i);
     ASSERT_EQ(temp.front(), 1000 - i);
     temp.pop();
   }
-  ASSERT_EQ(container > temp, true);
+  ASSERT_TRUE(container > temp);
   temp.swap(container);
-  ASSERT_EQ(container < temp, true);
-  ASSERT_EQ(container != temp, true);
+  ASSERT_TRUE(container < temp);
+  ASSERT_TRUE(container != temp);
   for (int i = 1000; i > 0; i--) {
     ASSERT_EQ(temp.size(), i);
     ASSERT_EQ(temp.front(), 1000 - i);
     temp.pop();
   }
-  ASSERT_EQ(container == temp, true);
+  ASSERT_TRUE(container == temp);
 }
 } // namespace rbc
