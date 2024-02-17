@@ -32,6 +32,7 @@ TEST(QueueTest, BasicTest) {
   container.pop();
   ASSERT_EQ(container.front(), 5);
   ASSERT_EQ(container.back(), container.front());
+  container.pop();
 }
 
 TEST(QueueTest, QueueSizeTest) {
