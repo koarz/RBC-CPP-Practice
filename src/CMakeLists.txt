@@ -5,6 +5,7 @@ set(LIBRARY_HEAD
     include/queue.hpp
     include/list.hpp
     include/forward_list.hpp
+    include/stack.hpp
 )
 
 add_library(library STATIC ${LIBRARY_HEAD})
