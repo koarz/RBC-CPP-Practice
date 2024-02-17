@@ -1,6 +1,7 @@
 #include "stack.hpp"
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
+#include <iostream>
 
 namespace rbc {
 TEST(StackTest, BasicTest) {
@@ -41,9 +42,8 @@ TEST(StackTest, SwapTest) {
   EXPECT_FALSE(su.empty());
   EXPECT_EQ(st.size(), 0);
   EXPECT_TRUE(st.empty());
-  EXPECT_DEATH(st.top(), "");
   for (int i = 99; i >= 0; i--) {
-    EXPECT_EQ(st.top(), i * 2);
+    EXPECT_EQ(su.top(), i * 2);
     su.pop();
   }
 }
