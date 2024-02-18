@@ -6,6 +6,7 @@ set(LIBRARY_HEAD
     include/list.hpp
     include/forward_list.hpp
     include/stack.hpp
+    include/binary_search_tree.hpp
 )
 
 add_library(library STATIC ${LIBRARY_HEAD})
