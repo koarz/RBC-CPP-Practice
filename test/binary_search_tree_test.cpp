@@ -202,7 +202,7 @@ TEST(BinarySearchTreeTest, TEST15) {
     bst.add_node(9);
 
     rbc::Node<int>** node{bst.find_successor(10)};
-    EXPECT_EQ((*node)->value, 9);
+    EXPECT_EQ((*node)->value, 15);
     EXPECT_EQ((*node)->left, nullptr);
     EXPECT_EQ((*node)->right, nullptr);
 }
@@ -460,7 +460,7 @@ TEST(BinarySearchTreeTest, TEST28) {
 TEST(BinarySearchTreeTest, TEST29) {
     rbc::BST<int> bst1{5, 1, 10, 2, 8, 50, 4, 60};
     rbc::BST<int> bst2{3, 2, 100, 20, 8, 50, 4, 60, 44, 23};
-    EXPECT_EQ((*bst1.find_successor(5))->value, 4);
+    EXPECT_EQ((*bst1.find_successor(5))->value, 8);
     EXPECT_EQ(bst2.length(), 10);
 }
 
