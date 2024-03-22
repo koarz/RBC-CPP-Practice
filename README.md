@@ -25,3 +25,6 @@ cmake ..
 注意，以上命令仅需输入一次，以后就不需要了
 
 最后再输入`make filename_test`，例如想要验证`queue`容器的正确性，那就是`make queue_test`，编译好后执行`./test/queue_test`即可
+
+# 详细教程
+详细教程请看[How to start rbc cpp practice](https://www.redbloodcell.top/blog/9-how-to-start-rbc-cpp-practice)，如果还是有不懂的请在评论区留言，或者加群，或者提issue我会尽快解决
