@@ -1,7 +1,6 @@
-#include "stack.hpp"
+#include "struct/stack.hpp"
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
-#include <iostream>
 
 namespace rbc {
 TEST(StackTest, BasicTest) {

@@ -1,11 +1,4 @@
-/**
- ******************************************************************************
- * @file           : queue_test.cpp
- * @author         : Koarz
- * @date           : 2024/1/22
- ******************************************************************************
- */
-#include "queue.hpp"
+#include "struct/queue.hpp"
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 // queue test
