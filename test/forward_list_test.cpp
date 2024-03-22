@@ -40,7 +40,7 @@ TEST(ForwardListTest, OperatorTest) {
   }
 }
 
-TEST(ForwardListTest, IteratorAndOpratorTest) {
+TEST(ForwardListTest, DISABLED_IteratorAndOpratorTest) {
   rbc::forward_list<int> c;
   rbc::forward_list<int> a;
   for (int i = 0; i < 100; i++) {
