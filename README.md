@@ -4,6 +4,10 @@
 
 环境：Ubuntu 22.04
 
+`注：强烈建议别用windows，这鬼东西编译时一堆问题，你要是爱折腾那无所谓，如果你爱惜生命，请直接使用虚拟机或者wsl安装ubuntu`
+
+还有一件事，你至少需要的工具有c++各种编译器（clang，g++）、cmake、make。具体安装方法请自己查，这是你必须学习的一部分（如果你以后走计算机这条路的话），查了也不会那就问吧
+
 ## 如果你不会Git
 
 首先在控制台输入`git clone https://github.com/koarz/RBC-Struct-Practice.git`这样你就可以获取整个仓库的代码了。
@@ -20,4 +24,4 @@ cmake ..
 ```
 注意，以上命令仅需输入一次，以后就不需要了
 
-最后再输入`make file_test`，例如想要验证`queue`容器的正确性，那就是`make queue_test`，编译好后执行`./test/queue_test`即可
+最后再输入`make filename_test`，例如想要验证`queue`容器的正确性，那就是`make queue_test`，编译好后执行`./test/queue_test`即可
