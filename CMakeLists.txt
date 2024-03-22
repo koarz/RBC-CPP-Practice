@@ -44,13 +44,13 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-set(SRC_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/src/include)
+set(SRC_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
 set(THIRD_PARTY_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/thirdparty)
 
 include_directories(${SRC_INCLUDE_DIR} ${THIRD_PARTY_INCLUDE_DIR})
 include_directories(BEFORE src) # This is needed for gtest.
 
 
-add_subdirectory(src)
+add_subdirectory(include)
 add_subdirectory(test)
 add_subdirectory(thirdparty)

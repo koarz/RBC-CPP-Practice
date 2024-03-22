@@ -1,15 +1,8 @@
 cmake_minimum_required(VERSION 3.14)
 
-# 添加头文件
-set(LIBRARY_HEAD
-    include/queue.hpp
-    include/list.hpp
-    include/forward_list.hpp
-    include/stack.hpp
-    include/binary_search_tree.hpp
-)
-
-add_library(library STATIC ${LIBRARY_HEAD})
+add_subdirectory(template)
+add_subdirectory(struct)
+add_subdirectory(class)
 
 set_target_properties(library PROPERTIES
     LINKER_LANGUAGE CXX
