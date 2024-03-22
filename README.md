@@ -10,7 +10,7 @@
 
 ## 如果你不会Git
 
-首先在控制台输入`git clone https://github.com/koarz/RBC-Struct-Practice.git`这样你就可以获取整个仓库的代码了。
+首先在控制台输入`git clone https://github.com/koarz/RBC-CPP-Practice.git`这样你就可以获取整个仓库的代码了。
 
 ## 如何编译和运行test文件
 
