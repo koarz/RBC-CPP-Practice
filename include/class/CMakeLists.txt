@@ -1,5 +1,6 @@
-set(LIBRARY_HEAD
-    class_access.hpp
-)
+# set(LIBRARY_HEAD
+#     class_access.hpp
+#     virtual.hpp
+# )
 
-add_library(library STATIC ${LIBRARY_HEAD})
+# add_library(class STATIC ${LIBRARY_HEAD})
