@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # 在这里填入你自己的编译器路径
 # set(CMAKE_C_COMPILER C:/msys64/mingw64/bin/gcc.exe  CACHE STRING "C compiler" FORCE)
 # set(CMAKE_CXX_COMPILER C:/msys64/mingw64/bin/g++.exe  CACHE STRING "C++ compiler" FORCE)
