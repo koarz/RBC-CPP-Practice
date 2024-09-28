@@ -24,7 +24,7 @@ foreach (test_source ${TEST_SOURCES})
             TIMEOUT 120
     )
 
-    target_link_libraries(${test_name} library gtest gmock_main )
+    target_link_libraries(${test_name} basic_struct complex_struct gtest gmock_main )
 
     # Set test target properties and dependencies.
     set_target_properties(${test_name}

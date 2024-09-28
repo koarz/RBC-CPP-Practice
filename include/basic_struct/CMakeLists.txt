@@ -6,4 +6,4 @@ set(LIBRARY_HEAD
     binary_search_tree.hpp
 )
 
-add_library(library STATIC ${LIBRARY_HEAD})
+add_library(basic_struct STATIC ${LIBRARY_HEAD})
