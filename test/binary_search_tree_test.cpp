@@ -1,4 +1,4 @@
-#include "struct/binary_search_tree.hpp"
+#include "basic_struct/binary_search_tree.hpp"
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 

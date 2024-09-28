@@ -1,4 +1,4 @@
-#include "struct/queue.hpp"
+#include "basic_struct/queue.hpp"
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 // queue test

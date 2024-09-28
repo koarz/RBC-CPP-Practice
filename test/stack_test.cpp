@@ -1,4 +1,4 @@
-#include "struct/stack.hpp"
+#include "basic_struct/stack.hpp"
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 

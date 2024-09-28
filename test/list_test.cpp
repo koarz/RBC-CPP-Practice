@@ -1,4 +1,4 @@
-#include "struct/list.hpp"
+#include "basic_struct/list.hpp"
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 namespace rbc {
