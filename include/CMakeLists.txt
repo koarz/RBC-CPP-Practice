@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 
 # add_subdirectory(template)
-add_subdirectory(struct)
+add_subdirectory(basic_struct)
 add_subdirectory(class)
 
 set_target_properties(library PROPERTIES
