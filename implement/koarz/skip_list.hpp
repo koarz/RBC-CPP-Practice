@@ -45,7 +45,19 @@ template <typename _K, typename _V> class rbc::SkipList {
 
   void FindLessEqual(std::shared_ptr<SkipListNode<_K, _V>> node, const _K &key,
                      std::vector<std::shared_ptr<SkipListNode<_K, _V>>> &lord) {
+    // 思考我们的lord需要哪些数据?
+    // lord 应该保存每一层向下移动的节点, 向右移动代表右边的距离Key更近
+    // 向下移动则是当前节点当前层右边节点为 nullptr 或者右边节点大于 Key
+    // 思考为什么这种做法对凹型同样适用
     for (auto &p : node->next_) {
+      /*
+       * 为什么p为nullptr时不是break
+       * 思考一下, 如果在最上层该节点指向nullptr, 但是下层还有许多节点
+       * 那么返回当前node就是错误的, 比如查找 4 那么就会返回 2
+       * ROOT ------> 2 -----------> nullptr
+       * ROOT ------> 2 -> 3 ------> nullptr
+       * ROOT -> 1 -> 2 -> 3 -> 4 -> nullptr
+       */
       if (p == nullptr) {
         lord.push_back(node);
         continue;
