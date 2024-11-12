@@ -130,7 +130,8 @@ public:
   void Remove(KTp &&key) {
     std::vector<std::shared_ptr<SkipListNode<_K, _V>>> lord;
     FindLess(root_, key, lord);
-    if (*lord.rbegin() != root_ &&
+    if ((*lord.rbegin() != root_ ||
+         *((*lord.rbegin())->next_.rbegin()) != nullptr) &&
         (*(*lord.rbegin())->next_.rbegin())->kv_.first == key) {
       auto node = (*(*lord.rbegin())->next_.rbegin());
       auto ite = node->next_.begin();

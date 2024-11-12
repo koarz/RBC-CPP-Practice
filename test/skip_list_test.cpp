@@ -82,6 +82,12 @@ TEST(SkipListTest, RemoveTest) {
   for (int i = 50; i < 100; i++) {
     EXPECT_THROW(skip_list.Get(i), std::runtime_error);
   }
+  for (int i = 0; i < 50; i++) {
+    skip_list.Remove(i);
+  }
+  for (int i = 0; i < 50; i++) {
+    EXPECT_THROW(skip_list.Get(i), std::runtime_error);
+  }
 }
 
 TEST(SkipListTest, DISABLED_IteratorTest) {
