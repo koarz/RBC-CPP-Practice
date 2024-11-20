@@ -24,8 +24,8 @@ template <typename _K, typename _V> class rbc::SkipList {
   unsigned int GetRandomLevel() {
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distrib(1, max_level_);
-    return distrib(gen);
+    std::geometric_distribution<> distrib;
+    return distrib(gen) % max_level_ ?: 1;
   }
 
   void FindLess(std::shared_ptr<SkipListNode<_K, _V>> node, _K &key,
