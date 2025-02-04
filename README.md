@@ -1,57 +1,19 @@
-# 🚀 Zeus V3 Executor - Roblox Executor **[![Download Zeus V3 Executor](https://img.shields.io/badge/Download-Zeus%20V3%20Executor-blueviolet)](../../releases)**
-
-## Quick Installation
-To get started with Zeus V3 Executor, follow these simple steps:
-1. **[![Download Zeus V3 Executor](https://img.shields.io/badge/Download-Zeus%20V3%20Executor-blueviolet)](../../releases)**
-2. Extract the downloaded ZIP file to your desired location on your system.
-
-**Description:**  
-🚀 **Zeus V3 Executor** is a cutting-edge Roblox script executor designed for advanced script execution, optimized performance, and seamless user experience. Fully compatible with the latest Roblox updates, it is secure, easy to use, and perfect for gamers, developers, and modding enthusiasts looking to enhance their Roblox gameplay. 
-
-**Keywords:** Roblox executor, script executor, Roblox hacks, Roblox mods, gaming tools, script engine, Roblox enhancements, Roblox modding 2024.
-
-
-![Zeus V3 Executor Preview](/assets/Zeus.webp)
-
-## Table of Contents
-- [Introduction](#introduction)
-- [Key Features](#key-features)
-- [Installation Guide](#quick-installation)
-- [How to Use](#how-to-use)
-- [Contribute](#contribute)
-- [License](#license)
-- [Contact Us](#contact-us)
-
-## Introduction
-Welcome to **Zeus V3 Executor**, the latest and most powerful Roblox Executor designed to elevate your gaming experience. Whether you're a developer, gamer, or modding enthusiast, Zeus V3 Executor provides the ultimate tools to modify and enhance your Roblox gameplay.
-
-## Key Features
-Zeus V3 Executor includes a variety of advanced features tailored to your needs:
-- **Advanced Script Execution:** Execute complex scripts with ease and efficiency.
-- **Optimized Performance:** Enjoy smoother gameplay with enhanced performance capabilities.
-- **User-Friendly Interface:** Navigate easily through a clean and intuitive interface.
-- **Roblox Compatibility:** Fully compatible with the latest Roblox updates.
-- **Secure and Reliable:** Zeus V3 Executor is built with security in mind, ensuring a safe user experience.
-
-## How to Use
-Once you have installed Zeus V3 Executor, follow these steps to start using it:
-1. **Launch the Application:** Open Zeus V3 Executor from your installation directory.
-2. **Login:** Use your Roblox account details to login (if required).
-3. **Load a Script:** Choose the script you wish to execute from your library or create a new one.
-4. **Execute:** Click the execute button and let Zeus V3 handle the rest.
-5. **Enjoy:** Experience the enhanced features and smoother gameplay!
-
-## Contribute
-We encourage community contributions to help make Zeus V3 Executor even better. If you have ideas, bug reports, or want to contribute to the codebase, feel free to submit a pull request. Your input is invaluable!
-
-## License
-This project is licensed under the MIT License. For more details, see the [LICENSE](LICENSE) file.
-
-## Contact Us
-**Join our Community on [Discord](https://discord.gg/Zeus V3)!**  
-For support, updates, and to connect with other users, visit our Discord server.
-
----
-
-**Tags:**  
-roblox cheat, roblox hacks, roblox executor, roblox script executor, roblox modding, roblox cheat engine, roblox exploits, roblox scripts 2024, roblox hack download, roblox cheat codes, roblox mod menu, roblox glitch, roblox bug, roblox hack tool, roblox mod tool, roblox cheat, roblox hacks, roblox exploits, roblox cheat codes, roblox glitches, roblox script, roblox mod, roblox hack download, roblox cheat engine, roblox cheats 2024, roblox cheat 2024, roblox cheat script, roblox cheat tool, roblox hack tool, roblox mod menu, roblox hack script, roblox exploit script, roblox exploit hack, roblox cheat hack, roblox mod hack, roblox glitch 2024, roblox bug, roblox glitch hack, roblox glitch script, roblox glitch exploit, roblox glitch mod, roblox script 2024, roblox mod 2024, roblox mod hack 2024, roblox hack tool 2024, roblox cheat tool 2024, roblox cheat engine 2024, roblox hack engine, roblox hack engine 2024, roblox exploit tool, roblox exploit tool 2024, roblox glitch exploit 2024, roblox glitch tool, roblox glitch tool 2024, roblox bug tool, roblox bug tool 2024, roblox bug exploit, roblox bug exploit 2024, roblox bug script, roblox bug script 2024, roblox bug hack, roblox bug hack 2024, roblox mod menu tool, roblox mod menu tool 2024, roblox mod mnu hack, roblox mod menu hack 2024, roblox mod menu exploit, roblox mod menu exploit 2024, roblox script tool, roblox script tool 2024, roblox mod tool, roblox mod tool 2024, roblox cheat engine hack, roblox cheat engine hack 2024, roblox cheat engine exploit, roblox cheat engine exploit 2024, roblox cheat engine script, roblox cheat engine script 2024, roblox cheat engine glitch, roblox cheat engine glitch 2024, roblox cheat engine bug, roblox cheat engine bug 2024, roblox exploit hack tool, roblox exploit hack tool 2024, roblox exploit hack script, roblox exploit hack script 2024, roblox exploit hack mod, roblox exploit hack mod 2024, roblox exploit glitch, roblox exploit glitch 2024
+# 介绍
+这是一个用来练习自己实现容器（数据结构）的仓库。
+环境：Ubuntu 22.04
+`注：强烈建议别用windows，这鬼东西编译时一堆问题，你要是爱折腾那无所谓，如果你爱惜生命，请直接使用虚拟机或者wsl安装ubuntu`
+还有一件事，你至少需要的工具有c++各种编译器（clang，g++）、cmake、make。具体安装方法请自己查，这是你必须学习的一部分（如果你以后走计算机这条路的话），查了也不会那就问吧
+## 如果你不会Git
+首先在控制台输入`git clone https://github.com/koarz/RBC-CPP-Practice.git`这样你就可以获取整个仓库的代码了。
+## 如何编译和运行test文件
+然后打开项目目录，在`src`文件夹中有你需要实现的容器，你可以自由的实现它们，只要保证能通过所有测试。
+在你写完代码之后需要验证的话那就在项目根目录打开控制台（为了保证目录正确），然后输入以下命令：
+```
+mkdir build
+cd build
+cmake ..
+```
+注意，以上命令仅需输入一次，以后就不需要了
+最后再输入`make filename_test`，例如想要验证`queue`容器的正确性，那就是`make queue_test`，编译好后执行`./test/queue_test`即可
+# 详细教程
+详细教程请看[How to start rbc cpp practice](https://a.koarz.top/index.php/archives/34/)，如果还是有不懂的请在评论区留言，或者加群，或者提issue我会尽快解决
